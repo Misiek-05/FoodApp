@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KitchenHelper</string>
+    <string name="add_item">Add new item</string>
+
+    <string-array name="unit_options">
+        <item>kg</item>
+        <item>g</item>
+        <item>l</item>
+        <item>ml</item>
+        <item>szt</item>
+    </string-array>
+</resources>

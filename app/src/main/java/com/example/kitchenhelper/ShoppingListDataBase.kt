@@ -37,21 +37,35 @@ class ShoppingListDataBase(context: Context) : SQLiteOpenHelper(context, DATABAS
     fun addProduct(product:String, quantity:Int, unit:String): Long {
         val db = this.writableDatabase
 
-        val values = ContentValues().apply {
-            put(COLUMN_NAME, product)
-            put(COLUMN_QUANTITY, quantity)
-            put(COLUMN_UNIT, unit)
-        }
+        val cursor: Cursor = db.query(TABLE_NAME, arrayOf(COLUMN_ID, COLUMN_NAME, COLUMN_QUANTITY, COLUMN_UNIT), "$COLUMN_NAME=?",  arrayOf(product), null, null, null)
 
-        return db.insert(TABLE_NAME, null, values)
+        if(cursor.moveToFirst()) {
+            val id = cursor.getString(0)
+            val newQuantity = cursor.getInt(2) + quantity
+
+            val values = ContentValues().apply {
+                put(COLUMN_QUANTITY, newQuantity)
+            }
+
+            db.update(TABLE_NAME, values, "$COLUMN_ID=?", arrayOf(id))
+            return id.toLong()
+
+        } else {
+            val values = ContentValues().apply {
+                put(COLUMN_NAME, product)
+                put(COLUMN_QUANTITY, quantity)
+                put(COLUMN_UNIT, unit)
+            }
+
+            return db.insert(TABLE_NAME, null, values)
+        }
     }
 
     fun getProducts(): Cursor {
         val query: String = "SELECT * FROM " + TABLE_NAME
         val db: SQLiteDatabase = this.readableDatabase
 
-        val cursor: Cursor
-        cursor = db.rawQuery(query, null)
+        val cursor: Cursor = db.rawQuery(query, null)
 
         return cursor
     }
@@ -59,7 +73,6 @@ class ShoppingListDataBase(context: Context) : SQLiteOpenHelper(context, DATABAS
     fun deleteProduct(index: Int): Int {
         val db = this.writableDatabase
         val result = db.delete(TABLE_NAME, "$COLUMN_ID=?", arrayOf(index.toString()))
-        db.close()
         return result
     }
 }

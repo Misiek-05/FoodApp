@@ -37,13 +37,13 @@ class ListActivity : ComponentActivity() {
         unitList.clear()
 
         while(productsCursor.moveToNext()) {
-            indexList.add(productsCursor.getString(0).toInt())
+            indexList.add(productsCursor.getInt(0))
             productsList.add(productsCursor.getString(1))
-            quantityList.add(productsCursor.getString(2).toInt())
+            quantityList.add(productsCursor.getInt(2))
             unitList.add(productsCursor.getString(3))
         }
 
-        val customAdapter = CustomAdapter(indexList, productsList, quantityList, unitList)
+        val customAdapter = RecycleViewListActivity(indexList, productsList, quantityList, unitList)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = customAdapter

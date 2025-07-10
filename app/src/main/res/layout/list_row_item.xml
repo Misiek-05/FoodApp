@@ -23,7 +23,7 @@
             android:maxLines="1"
             android:text="Product"
             android:textColor="@color/White"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tvQuantity"
             app:layout_constraintHorizontal_bias="0.0"
@@ -40,7 +40,7 @@
             android:gravity="center"
             android:text="Qty"
             android:textColor="@color/White"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tvUnit"
             app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +53,7 @@
             android:gravity="center"
             android:text="Unit"
             android:textColor="@color/White"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btDelete"
             app:layout_constraintTop_toTopOf="parent" />

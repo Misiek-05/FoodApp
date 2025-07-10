@@ -10,11 +10,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import androidx.activity.ComponentActivity
-import androidx.core.content.ContextCompat.startActivity
 
-class CustomAdapter(private val indexList: ArrayList<Int>, private val productList: ArrayList<String>, private val quantityList: ArrayList<Int>, private val unitList: ArrayList<String>) :
-    RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+class RecycleViewListActivity(private val indexList: ArrayList<Int>, private val productList: ArrayList<String>, private val quantityList: ArrayList<Int>, private val unitList: ArrayList<String>) :
+    RecyclerView.Adapter<RecycleViewListActivity.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvProduct: TextView
@@ -32,7 +30,7 @@ class CustomAdapter(private val indexList: ArrayList<Int>, private val productLi
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.text_row_item, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.list_row_item, viewGroup, false)
 
         return ViewHolder(view)
     }

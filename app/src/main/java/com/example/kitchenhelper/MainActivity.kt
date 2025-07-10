@@ -25,7 +25,8 @@ class MainActivity : ComponentActivity() {
         }
 
         btRecipe.setOnClickListener {
-
+            val intent = Intent(this, RecipesActivity::class.java)
+            startActivity(intent)
         }
 
         btNutrition.setOnClickListener {

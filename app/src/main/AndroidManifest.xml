@@ -30,6 +30,18 @@
             android:label="Dodaj Produkt">
 
         </activity>
+
+        <activity
+            android:name=".RecipesActivity"
+            android:label="Przepisy">
+
+        </activity>
+
+        <activity
+            android:name=".AddRecipeActivity"
+            android:label="Dodaj Przepis">
+
+        </activity>
     </application>
 
 </manifest>

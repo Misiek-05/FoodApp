@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper
 class ShoppingListDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_NAME = "MyDatabase.db"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_NAME = "ShoppingListDataBase.db"
+        private const val DATABASE_VERSION = 2
 
         const val TABLE_NAME = "products"
         const val COLUMN_ID = "id"

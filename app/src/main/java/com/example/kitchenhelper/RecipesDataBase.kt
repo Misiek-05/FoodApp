@@ -54,6 +54,14 @@ class RecipesDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         return cursor
     }
 
+    fun getRecipe(index: String): Cursor {
+        val db = this.writableDatabase
+
+        val cursor: Cursor = db.query(TABLE_NAME, arrayOf(COLUMN_ID, COLUMN_RECIPE, COLUMN_ABOUT), "$COLUMN_ID=?",  arrayOf(index), null, null, null)
+
+        return cursor
+    }
+
     fun deleteRecipe(index: Int): Int {
         val db = this.writableDatabase
         val result = db.delete(TABLE_NAME, "$COLUMN_ID=?", arrayOf(index.toString()))

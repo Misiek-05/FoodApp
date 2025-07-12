@@ -40,11 +40,11 @@ class RecycleViewListActivity(private val indexList: ArrayList<Int>, private val
         viewHolder.tvProduct.text = productList[position]
         viewHolder.tvQuantity.text = quantityList[position].toString()
         viewHolder.tvUnit.text = unitList[position]
+
         viewHolder.btDelete.setOnClickListener {
             val context = viewHolder.itemView.context
             val db = ShoppingListDataBase(context)
             db.deleteProduct(index)
-
 
             Toast.makeText(context, "Usunięto produkt",Toast.LENGTH_SHORT).show()
             context.startActivity(Intent(context, ListActivity::class.java))

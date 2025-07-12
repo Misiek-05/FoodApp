@@ -42,6 +42,11 @@
             android:label="Dodaj Przepis">
 
         </activity>
+
+        <activity android:name=".RecipeViewActivity"
+            android:label="Przepis">
+
+        </activity>
     </application>
 
 </manifest>

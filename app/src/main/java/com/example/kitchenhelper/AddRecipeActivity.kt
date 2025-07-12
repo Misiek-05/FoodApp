@@ -31,8 +31,7 @@ class AddRecipeActivity : ComponentActivity() {
             if(recipeInput.isNotEmpty() && aboutInput.isNotEmpty()) {
                 recipesdb.addRecipe(recipeInput, aboutInput)
                 Toast.makeText(this, "Dodano Przepis", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, RecipesActivity::class.java)
-                startActivity(intent)
+                finish()
             }
             else {
                 Toast.makeText(this, "Uzupełnij Dane", Toast.LENGTH_SHORT).show()

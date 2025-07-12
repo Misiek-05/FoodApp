@@ -28,6 +28,22 @@ class ListActivity : ComponentActivity() {
         btAdd = findViewById(R.id.btAdd)
         recyclerView = findViewById(R.id.recyclerView)
 
+        createView()
+
+        btAdd.setOnClickListener {
+            val intent = Intent(this, AddActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        createView()
+
+    }
+
+    private fun createView() {
         shoppingListdb = ShoppingListDataBase(this)
         productsCursor = shoppingListdb.getProducts()
 
@@ -47,11 +63,6 @@ class ListActivity : ComponentActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = customAdapter
-
-
-        btAdd.setOnClickListener {
-            val intent = Intent(this, AddActivity::class.java)
-            startActivity(intent)
-        }
     }
+
 }

@@ -26,6 +26,21 @@ class RecipesActivity : ComponentActivity() {
         btAdd = findViewById(R.id.btAdd)
         recyclerView = findViewById(R.id.recyclerView)
 
+        createView()
+
+        btAdd.setOnClickListener {
+            val intent = Intent(this, AddRecipeActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        createView()
+    }
+
+    private fun createView() {
         recipesdb = RecipesDataBase(this)
         recipeCursor = recipesdb.getRecipes()
 
@@ -46,6 +61,6 @@ class RecipesActivity : ComponentActivity() {
             val intent = Intent(this, AddRecipeActivity::class.java)
             startActivity(intent)
         }
-
     }
+
 }

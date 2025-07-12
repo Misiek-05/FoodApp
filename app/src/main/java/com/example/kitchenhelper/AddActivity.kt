@@ -18,13 +18,6 @@ class AddActivity : ComponentActivity() {
     private lateinit var btAddProduct: Button
     private lateinit var shoppingListdb: ShoppingListDataBase
 
-    private fun spinnerSetting() {
-        unitSpinner = findViewById(R.id.SpinnerUnit)
-        val adapter = ArrayAdapter.createFromResource(this, R.array.unit_options, android.R.layout.simple_spinner_dropdown_item)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        unitSpinner.adapter = adapter
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_layout)
@@ -47,14 +40,20 @@ class AddActivity : ComponentActivity() {
             if (productInput.isNotEmpty() && value != null) {
                 shoppingListdb.addProduct(productInput, value, spinnerInput)
                 Toast.makeText(this,"Produkt został dodany", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, ListActivity::class.java)
-                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Podaj Produkt i ilość", Toast.LENGTH_SHORT).show()
             }
 
         }
 
+    }
+
+    private fun spinnerSetting() {
+        unitSpinner = findViewById(R.id.SpinnerUnit)
+        val adapter = ArrayAdapter.createFromResource(this, R.array.unit_options, android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        unitSpinner.adapter = adapter
     }
 
 }

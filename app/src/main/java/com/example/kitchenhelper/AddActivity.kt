@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import ShoppingListDataBase
-import android.content.Intent
 import android.widget.Toast
 
 class AddActivity : ComponentActivity() {

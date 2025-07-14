@@ -47,6 +47,11 @@
             android:label="Przepis">
 
         </activity>
+
+        <activity android:name=".AddIngredientActivity"
+            android:label="Przepis">
+
+        </activity>
     </application>
 
 </manifest>

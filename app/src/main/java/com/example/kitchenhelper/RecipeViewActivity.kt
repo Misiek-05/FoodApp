@@ -1,6 +1,7 @@
 package com.example.kitchenhelper
 
 import IngredientsDataBase
+import ShoppingListDataBase
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle
@@ -16,10 +17,12 @@ class RecipeViewActivity : ComponentActivity() {
 
     private lateinit var recipeName: TextView
     private lateinit var about: TextView
-    private lateinit var recipebd: RecipesDataBase
-    private lateinit var ingredientdb : IngredientsDataBase
     private lateinit var recipeCursor: Cursor
     private lateinit var actionButton: Button
+
+    private lateinit var recipebd: RecipesDataBase
+    private lateinit var ingredientdb : IngredientsDataBase
+    private lateinit var shoppingListdb: ShoppingListDataBase
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var productsCursor: Cursor
@@ -38,7 +41,7 @@ class RecipeViewActivity : ComponentActivity() {
         index = intent.getIntExtra("index", -1)
         recipe = intent.getStringExtra("recipe").toString()
 
-        createView(index, recipe)
+        createView()
 
         actionButton.setOnClickListener {
             val popup = PopupMenu(this, actionButton)
@@ -53,8 +56,8 @@ class RecipeViewActivity : ComponentActivity() {
                         true
                     }
                     R.id.menu_add_to_list -> {
-
-                        Toast.makeText(this, "Add to List clicked", Toast.LENGTH_SHORT).show()
+                        transferToList()
+                        Toast.makeText(this, "Dodano do listy", Toast.LENGTH_SHORT).show()
                         true
                     }
                     else -> false
@@ -66,10 +69,10 @@ class RecipeViewActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
-        createView(index, recipe)
+        createView()
     }
 
-    private fun createView(index: Int, recipe: String) {
+    private fun createView() {
         title = recipe
 
         recipebd = RecipesDataBase(this)
@@ -114,7 +117,10 @@ class RecipeViewActivity : ComponentActivity() {
     }
 
     private fun transferToList() {
-            
+        shoppingListdb = ShoppingListDataBase(this)
+        for(item in 0..<indexList.size) {
+            shoppingListdb.addProduct(ingredientList[item], quantityList[item], unitList[item])
+        }
     }
 
 }

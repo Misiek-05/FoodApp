@@ -30,7 +30,8 @@ class MainActivity : ComponentActivity() {
         }
 
         btNutrition.setOnClickListener {
-
+            val intent = Intent(this, NutritionActivity::class.java)
+            startActivity(intent)
         }
     }
 }

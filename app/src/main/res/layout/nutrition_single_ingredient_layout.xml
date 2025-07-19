@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/Cream">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/tvSingleIngredient"
+            android:layout_width="247dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="Type ingredient"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textColorHint="@color/White"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="381dp"
+            android:layout_height="417dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:rowCount="6"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/btSingleIngredientNutritionCheck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSingleIngredient">
+
+
+            <TextView
+                android:id="@+id/item1"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="KCAL"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item2"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="KCAL"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item3"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="FATS"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item4"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="FATS"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item5"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="PROTEIN"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item6"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="PROTEIN"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item7"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="FIBER"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item8"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="FIBER"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item9"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="CARBOHYDRATES"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item10"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="CARBOHYDRATES"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item11"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="SUGAR"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item12"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:text="SUGAR"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btSingleIngredientNutritionCheck"
+            android:layout_width="165dp"
+            android:layout_height="76dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/button_background_green"
+            android:text="Check nutrition"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

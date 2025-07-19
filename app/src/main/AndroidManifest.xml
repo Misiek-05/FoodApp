@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -43,13 +43,33 @@
 
         </activity>
 
-        <activity android:name=".RecipeViewActivity"
+        <activity
+            android:name=".RecipeViewActivity"
             android:label="Przepis">
 
         </activity>
 
-        <activity android:name=".AddIngredientActivity"
+        <activity
+            android:name=".AddIngredientActivity"
             android:label="Przepis">
+
+        </activity>
+
+        <activity
+            android:name=".NutritionActivity"
+            android:label="Nutrition">
+
+        </activity>
+
+        <activity
+            android:name=".NutritionCalculatorActivity"
+            android:label="Nutrition">
+
+        </activity>
+
+        <activity
+            android:name=".NutritionSingleIngredientActivity"
+            android:label="Nutrition (per 100g)">
 
         </activity>
     </application>

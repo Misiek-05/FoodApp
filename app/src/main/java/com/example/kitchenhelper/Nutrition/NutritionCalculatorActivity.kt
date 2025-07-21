@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kitchenhelper.DataBases.CalculatorDataBase
 import com.example.kitchenhelper.R
+import kotlin.math.floor
 
 class NutritionCalculatorActivity : ComponentActivity() {
 
@@ -110,12 +111,12 @@ class NutritionCalculatorActivity : ComponentActivity() {
             productsList.add(productsCursor.getString(1))
             quantityList.add(productsCursor.getInt(2))
             unitList.add(productsCursor.getString(3))
-            kcal += productsCursor.getDouble(4)
-            fats += productsCursor.getDouble(5)
-            protein += productsCursor.getDouble(6)
-            fiber += productsCursor.getDouble(7)
-            carbs += productsCursor.getDouble(8)
-            sugar += productsCursor.getDouble(9)
+            kcal += floor(productsCursor.getDouble(4))
+            fats += floor(productsCursor.getDouble(5))
+            protein += floor(productsCursor.getDouble(6))
+            fiber += floor(productsCursor.getDouble(7))
+            carbs += floor(productsCursor.getDouble(8))
+            sugar += floor(productsCursor.getDouble(9))
         }
 
         val customAdapter = RecycleViewCalculatorViewActivity(indexList, productsList, quantityList, unitList)

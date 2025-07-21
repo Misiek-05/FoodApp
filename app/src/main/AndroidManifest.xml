@@ -21,61 +21,61 @@
 
         <activity
             android:name=".ShoppingList.ListActivity"
-            android:label="Lista Zakupów">
+            android:label="Shopping List">
 
         </activity>
 
         <activity
             android:name=".ShoppingList.AddActivity"
-            android:label="Dodaj Produkt">
+            android:label="Add product">
 
         </activity>
 
         <activity
             android:name=".Recipes.RecipesActivity"
-            android:label="Przepisy">
+            android:label="Recipes">
 
         </activity>
 
         <activity
             android:name=".Recipes.AddRecipeActivity"
-            android:label="Dodaj Przepis">
+            android:label="Add Recipe">
 
         </activity>
 
         <activity
             android:name=".Recipes.RecipeViewActivity"
-            android:label="Przepis">
+            android:label="Recipe">
 
         </activity>
 
         <activity
             android:name=".Recipes.AddIngredientActivity"
-            android:label="Przepis">
+            android:label="Add ingredient">
 
         </activity>
 
         <activity
             android:name=".Nutrition.NutritionActivity"
-            android:label="Nutrition">
+            android:label="Nutritional values">
 
         </activity>
 
         <activity
             android:name=".Nutrition.NutritionCalculatorActivity"
-            android:label="Nutrition">
+            android:label="Nutritional values calculator">
 
         </activity>
 
         <activity
             android:name=".Nutrition.NutritionSingleIngredientActivity"
-            android:label="Nutrition (per 100g)">
+            android:label="Nutritional values (per 100g)">
 
         </activity>
 
         <activity
             android:name=".Nutrition.AddToCalculatorActivity"
-            android:label="Nutrition Calculator">
+            android:label="Add product to calculator">
 
         </activity>
     </application>

@@ -21,3 +21,5 @@ To install and run this app, you'll need Android Studio installed on your comput
 2. Open Project in Android Studio
 3. Build a project
 4. ▶️Run it on emulator in Anroid Studio or on your phone
+
+## How to use it

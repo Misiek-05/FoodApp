@@ -1,9 +1,10 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Nutrition
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
+import com.example.kitchenhelper.R
 
 class NutritionActivity : ComponentActivity() {
 
@@ -23,7 +24,8 @@ class NutritionActivity : ComponentActivity() {
         }
 
         btCalculator.setOnClickListener {
-
+            val intent = Intent(this, NutritionCalculatorActivity::class.java)
+            startActivity(intent)
         }
     }
 }

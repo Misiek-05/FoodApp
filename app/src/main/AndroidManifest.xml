@@ -20,56 +20,62 @@
         </activity>
 
         <activity
-            android:name=".ListActivity"
+            android:name=".ShoppingList.ListActivity"
             android:label="Lista Zakupów">
 
         </activity>
 
         <activity
-            android:name=".AddActivity"
+            android:name=".ShoppingList.AddActivity"
             android:label="Dodaj Produkt">
 
         </activity>
 
         <activity
-            android:name=".RecipesActivity"
+            android:name=".Recipes.RecipesActivity"
             android:label="Przepisy">
 
         </activity>
 
         <activity
-            android:name=".AddRecipeActivity"
+            android:name=".Recipes.AddRecipeActivity"
             android:label="Dodaj Przepis">
 
         </activity>
 
         <activity
-            android:name=".RecipeViewActivity"
+            android:name=".Recipes.RecipeViewActivity"
             android:label="Przepis">
 
         </activity>
 
         <activity
-            android:name=".AddIngredientActivity"
+            android:name=".Recipes.AddIngredientActivity"
             android:label="Przepis">
 
         </activity>
 
         <activity
-            android:name=".NutritionActivity"
+            android:name=".Nutrition.NutritionActivity"
             android:label="Nutrition">
 
         </activity>
 
         <activity
-            android:name=".NutritionCalculatorActivity"
+            android:name=".Nutrition.NutritionCalculatorActivity"
             android:label="Nutrition">
 
         </activity>
 
         <activity
-            android:name=".NutritionSingleIngredientActivity"
+            android:name=".Nutrition.NutritionSingleIngredientActivity"
             android:label="Nutrition (per 100g)">
+
+        </activity>
+
+        <activity
+            android:name=".Nutrition.AddToCalculatorActivity"
+            android:label="Nutrition Calculator">
 
         </activity>
     </application>

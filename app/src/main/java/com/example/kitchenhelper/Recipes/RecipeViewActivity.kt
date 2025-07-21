@@ -1,7 +1,7 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Recipes
 
-import IngredientsDataBase
-import ShoppingListDataBase
+import com.example.kitchenhelper.DataBases.IngredientsDataBase
+import com.example.kitchenhelper.ShoppingList.ShoppingListDataBase
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle
@@ -12,6 +12,8 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kitchenhelper.DataBases.RecipesDataBase
+import com.example.kitchenhelper.R
 
 class RecipeViewActivity : ComponentActivity() {
 

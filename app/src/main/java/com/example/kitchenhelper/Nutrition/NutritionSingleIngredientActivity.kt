@@ -1,6 +1,5 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Nutrition
 
-import Product
 import android.os.Bundle
 import android.view.View.*
 import android.widget.Button
@@ -9,6 +8,7 @@ import android.widget.GridLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.example.kitchenhelper.R
 
 class NutritionSingleIngredientActivity : ComponentActivity() {
 
@@ -52,9 +52,8 @@ class NutritionSingleIngredientActivity : ComponentActivity() {
                     tvSugar.text = food.getSugar().toString() + "g"
                 }
                 else {
-                    title = food.getName()
                     grid.visibility = INVISIBLE
-                    Toast.makeText(this, "There isn't", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "We don't have this product in our database, sorry", Toast.LENGTH_SHORT).show()
                 }
             }
             else {

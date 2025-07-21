@@ -1,4 +1,4 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Recipes
 
 import android.app.Activity
 import android.content.Intent
@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kitchenhelper.DataBases.RecipesDataBase
+import com.example.kitchenhelper.R
 
 class RecycleViewRecipeActivity(private val indexList: ArrayList<Int>, private val recipesList: ArrayList<String>) :
     RecyclerView.Adapter<RecycleViewRecipeActivity.ViewHolder>() {
@@ -41,7 +43,7 @@ class RecycleViewRecipeActivity(private val indexList: ArrayList<Int>, private v
             val db : RecipesDataBase = RecipesDataBase(context)
             db.deleteRecipe(index)
 
-            Toast.makeText(context, "Usunięto produkt", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Recipe has been deleted", Toast.LENGTH_SHORT).show()
             context.startActivity(Intent(context, RecipesActivity::class.java))
             (context as Activity).finish()
         }

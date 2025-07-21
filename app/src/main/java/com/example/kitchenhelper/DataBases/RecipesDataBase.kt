@@ -1,4 +1,4 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.DataBases
 
 import android.content.ContentValues
 import android.content.Context

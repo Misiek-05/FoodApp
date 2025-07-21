@@ -1,6 +1,5 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Nutrition
 
-import ShoppingListDataBase
 import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,9 +9,11 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kitchenhelper.DataBases.CalculatorDataBase
+import com.example.kitchenhelper.R
 
-class RecycleViewListActivity(private val indexList: ArrayList<Int>, private val productList: ArrayList<String>, private val quantityList: ArrayList<Int>, private val unitList: ArrayList<String>) :
-    RecyclerView.Adapter<RecycleViewListActivity.ViewHolder>() {
+class RecycleViewCalculatorViewActivity(private val indexList: ArrayList<Int>, private val productList: ArrayList<String>, private val quantityList: ArrayList<Int>, private val unitList: ArrayList<String>) :
+RecyclerView.Adapter<RecycleViewCalculatorViewActivity.ViewHolder>(){
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvProduct: TextView
@@ -43,15 +44,16 @@ class RecycleViewListActivity(private val indexList: ArrayList<Int>, private val
 
         viewHolder.btDelete.setOnClickListener {
             val context = viewHolder.itemView.context
-            val db = ShoppingListDataBase(context)
+            val db = CalculatorDataBase(context)
             db.deleteProduct(index)
 
-            Toast.makeText(context, "Usunięto produkt",Toast.LENGTH_SHORT).show()
-            context.startActivity(Intent(context, ListActivity::class.java))
+            Toast.makeText(context, "com.example.kitchenhelper.Nutrition.Product has been deleted",Toast.LENGTH_SHORT).show()
+            context.startActivity(Intent(context, NutritionCalculatorActivity::class.java))
             (context as Activity).finish()
         }
     }
 
-    override fun getItemCount() = productList.size
+
+    override fun getItemCount(): Int = indexList.size
 
 }

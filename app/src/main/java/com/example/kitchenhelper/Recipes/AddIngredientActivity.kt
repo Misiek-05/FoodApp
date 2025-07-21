@@ -1,6 +1,6 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Recipes
 
-import IngredientsDataBase
+import com.example.kitchenhelper.DataBases.IngredientsDataBase
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.example.kitchenhelper.R
 
 class AddIngredientActivity : ComponentActivity() {
 
@@ -39,10 +40,10 @@ class AddIngredientActivity : ComponentActivity() {
 
             if (ingredient.isNotEmpty() && value != null) {
                 ingredientsDataBase.addProduct(recipe,ingredient,value,unit)
-                Toast.makeText(this,"Składnik został dodany", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Ingredient has been added", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Uzupełnij dane", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Missing input", Toast.LENGTH_SHORT).show()
             }
         }
 

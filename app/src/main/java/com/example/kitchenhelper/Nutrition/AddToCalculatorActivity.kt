@@ -1,28 +1,28 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Nutrition
 
 import android.os.Bundle
-import android.widget.Spinner
-import androidx.activity.ComponentActivity
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
-import ShoppingListDataBase
+import android.widget.Spinner
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import com.example.kitchenhelper.DataBases.CalculatorDataBase
+import com.example.kitchenhelper.R
 
-class AddActivity : ComponentActivity() {
+class AddToCalculatorActivity : ComponentActivity() {
 
     private lateinit var unitSpinner: Spinner
     private lateinit var tvProduct: EditText
     private lateinit var tvQuantity: EditText
     private lateinit var btAddProduct: Button
-    private lateinit var shoppingListdb: ShoppingListDataBase
+    private lateinit var calculatorDataBase: CalculatorDataBase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_layout)
 
-        shoppingListdb = ShoppingListDataBase(this)
-
+        calculatorDataBase = CalculatorDataBase(this)
         tvProduct = findViewById(R.id.tvProductInput)
         tvQuantity = findViewById(R.id.tvQuantityInput)
         btAddProduct = findViewById(R.id.btAddProduct)
@@ -37,22 +37,21 @@ class AddActivity : ComponentActivity() {
             val spinnerInput = unitSpinner.selectedItem.toString()
 
             if (productInput.isNotEmpty() && value != null) {
-                shoppingListdb.addProduct(productInput, value, spinnerInput)
-                Toast.makeText(this,"Produkt został dodany", Toast.LENGTH_SHORT).show()
+                calculatorDataBase.addProduct(productInput, value, spinnerInput, this)
+                Toast.makeText(this,"com.example.kitchenhelper.Nutrition.Product has been added", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Podaj Produkt i ilość", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Missing input", Toast.LENGTH_SHORT).show()
             }
 
         }
-
     }
+
 
     private fun spinnerSetting() {
         unitSpinner = findViewById(R.id.SpinnerUnit)
-        val adapter = ArrayAdapter.createFromResource(this, R.array.unit_options, android.R.layout.simple_spinner_dropdown_item)
+        val adapter = ArrayAdapter.createFromResource(this, R.array.unit_options_calculator, android.R.layout.simple_spinner_dropdown_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         unitSpinner.adapter = adapter
     }
-
 }

@@ -1,4 +1,4 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Recipes
 
 import android.content.Intent
 import android.database.Cursor
@@ -7,7 +7,8 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.example.kitchenhelper.R
+import com.example.kitchenhelper.DataBases.RecipesDataBase
 
 
 class RecipesActivity : ComponentActivity() {

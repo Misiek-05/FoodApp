@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
+import com.example.kitchenhelper.Nutrition.NutritionActivity
+import com.example.kitchenhelper.Recipes.RecipesActivity
+import com.example.kitchenhelper.ShoppingList.ListActivity
 
 class MainActivity : ComponentActivity() {
 

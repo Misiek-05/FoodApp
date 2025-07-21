@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Cream"
-    tools:context=".AddActivity"
+    tools:context=".ShoppingList.AddActivity"
     android:padding="24dp">
 
     <EditText
@@ -14,8 +14,8 @@
         android:layout_height="72dp"
         android:layout_marginTop="108dp"
         android:background="@drawable/edit_text_background"
-        android:hint="Produkt"
-        android:inputType="text"
+        android:hint="Product"
+        android:inputType="textCapSentences"
         android:padding="16dp"
         android:textColor="@color/White"
         android:textColorHint="@color/White"
@@ -29,7 +29,7 @@
         android:id="@+id/tvQuantityInput"
         android:layout_width="0dp"
         android:layout_height="72dp"
-        android:hint="Ilość"
+        android:hint="Quantity"
         android:inputType="numberDecimal"
         android:background="@drawable/edit_text_background"
         android:padding="16dp"
@@ -54,7 +54,6 @@
         app:layout_constraintStart_toEndOf="@id/tvQuantityInput"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Submit Button -->
     <Button
         android:id="@+id/btAddProduct"
         android:layout_width="160dp"

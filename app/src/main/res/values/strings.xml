@@ -9,4 +9,9 @@
         <item>ml</item>
         <item>szt</item>
     </string-array>
+
+    <string-array name="unit_options_calculator">
+        <item>g</item>
+        <item>ml</item>
+    </string-array>
 </resources>

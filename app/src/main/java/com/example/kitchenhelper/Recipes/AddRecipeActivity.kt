@@ -1,10 +1,12 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.Recipes
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import com.example.kitchenhelper.R
+import com.example.kitchenhelper.DataBases.RecipesDataBase
 
 class AddRecipeActivity : ComponentActivity() {
 
@@ -29,11 +31,11 @@ class AddRecipeActivity : ComponentActivity() {
 
             if(recipeInput.isNotEmpty() && aboutInput.isNotEmpty()) {
                 recipesdb.addRecipe(recipeInput, aboutInput)
-                Toast.makeText(this, "Dodano Przepis", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Recipe has been added", Toast.LENGTH_SHORT).show()
                 finish()
             }
             else {
-                Toast.makeText(this, "Uzupełnij Dane", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Missing input", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -1,6 +1,5 @@
-package com.example.kitchenhelper
+package com.example.kitchenhelper.ShoppingList
 
-import IngredientsDataBase
 import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
@@ -10,10 +9,10 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kitchenhelper.R
 
-
-class RecycleViewRecipeViewActivity(private val indexList: ArrayList<Int>, private val ingredientList: ArrayList<String>, private val quantityList: ArrayList<Int>, private val unitList: ArrayList<String>):
-    RecyclerView.Adapter<RecycleViewRecipeViewActivity.ViewHolder>() {
+class RecycleViewListActivity(private val indexList: ArrayList<Int>, private val productList: ArrayList<String>, private val quantityList: ArrayList<Int>, private val unitList: ArrayList<String>) :
+    RecyclerView.Adapter<RecycleViewListActivity.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvProduct: TextView
@@ -38,35 +37,21 @@ class RecycleViewRecipeViewActivity(private val indexList: ArrayList<Int>, priva
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val index = indexList[position]
-        viewHolder.tvProduct.text = ingredientList[position]
+        viewHolder.tvProduct.text = productList[position]
         viewHolder.tvQuantity.text = quantityList[position].toString()
         viewHolder.tvUnit.text = unitList[position]
 
         viewHolder.btDelete.setOnClickListener {
             val context = viewHolder.itemView.context
-            val db = IngredientsDataBase(context)
+            val db = ShoppingListDataBase(context)
             db.deleteProduct(index)
 
-            Toast.makeText(context, "Usunięto produkt", Toast.LENGTH_SHORT).show()
-
-            // Get the current activity
-            val activity = context as Activity
-
-            // Create new intent with the required extras
-            val intent = Intent(context, RecipeViewActivity::class.java).apply {
-                // You'll need to add recipe name to your adapter
-                putExtra("recipe", activity.intent.getStringExtra("recipe"))
-                putExtra("index", activity.intent.getIntExtra("index", -1))
-            }
-
-            activity.finish()
-            context.startActivity(intent)
+            Toast.makeText(context, "com.example.kitchenhelper.Nutrition.Product has been deleted",Toast.LENGTH_SHORT).show()
+            context.startActivity(Intent(context, ListActivity::class.java))
+            (context as Activity).finish()
         }
     }
 
-    override fun getItemCount(): Int {
-        return indexList.size
-    }
-
+    override fun getItemCount() = productList.size
 
 }

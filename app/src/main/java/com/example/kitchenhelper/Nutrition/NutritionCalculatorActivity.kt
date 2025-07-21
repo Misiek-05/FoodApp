@@ -77,6 +77,16 @@ class NutritionCalculatorActivity : ComponentActivity() {
     override fun onStart() {
         super.onStart()
         createView()
+        if(indexList.size != 0) {
+            gridLayout.visibility = VISIBLE
+
+            tvKcal.text = kcal.toString() + "g"
+            tvFats.text = fats.toString() + "g"
+            tvProtein.text = protein.toString() + "g"
+            tvFiber.text = fiber.toString() + "g"
+            tvCarbs.text = carbs.toString() + "g"
+            tvSugar.text = sugar.toString() + "g"
+        }
     }
 
     private fun createView() {
@@ -88,6 +98,13 @@ class NutritionCalculatorActivity : ComponentActivity() {
         quantityList.clear()
         unitList.clear()
 
+        kcal = 0.0
+        fats = 0.0
+        protein = 0.0
+        fiber = 0.0
+        carbs = 0.0
+        sugar = 0.0
+        
         while(productsCursor.moveToNext()) {
             indexList.add(productsCursor.getInt(0))
             productsList.add(productsCursor.getString(1))

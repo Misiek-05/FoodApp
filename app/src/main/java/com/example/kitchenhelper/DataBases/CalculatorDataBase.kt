@@ -6,6 +6,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import kotlin.math.floor
 
 class CalculatorDataBase(context: Context) :  SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
 
@@ -69,12 +70,12 @@ class CalculatorDataBase(context: Context) :  SQLiteOpenHelper(context, DATABASE
         if (cursor.moveToFirst()) {
             val id = cursor.getString(0)
             val newQuantity = cursor.getInt(2) + quantity
-            val newKcal = cursor.getDouble(4) * multiplier + food.getKcal()
-            val newFats = cursor.getDouble(5) * multiplier + food.getFats()
-            val newProtein = cursor.getDouble(6) * multiplier + food.getProtein()
-            val newFiber = cursor.getDouble(7) * multiplier + food.getFiber()
-            val newCarbs = cursor.getDouble(8) * multiplier + food.getCarbs()
-            val newSugar = cursor.getDouble(9) * multiplier + food.getSugar()
+            val newKcal = floor(cursor.getDouble(4) * multiplier + food.getKcal())
+            val newFats = floor(cursor.getDouble(5) * multiplier + food.getFats())
+            val newProtein = floor(cursor.getDouble(6) * multiplier + food.getProtein())
+            val newFiber = floor(cursor.getDouble(7) * multiplier + food.getFiber())
+            val newCarbs = floor(cursor.getDouble(8) * multiplier + food.getCarbs())
+            val newSugar = floor(cursor.getDouble(9) * multiplier + food.getSugar())
 
             val values = ContentValues().apply {
                 put(COLUMN_QUANTITY, newQuantity)

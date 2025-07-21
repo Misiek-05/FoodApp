@@ -1,7 +1,7 @@
 package com.example.kitchenhelper.Recipes
 
 import com.example.kitchenhelper.DataBases.IngredientsDataBase
-import com.example.kitchenhelper.ShoppingList.ShoppingListDataBase
+import com.example.kitchenhelper.DataBases.ShoppingListDataBase
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle

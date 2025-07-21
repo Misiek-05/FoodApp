@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kitchenhelper.DataBases.ShoppingListDataBase
 import com.example.kitchenhelper.R
 
 class ListActivity : ComponentActivity() {

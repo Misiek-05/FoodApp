@@ -47,7 +47,7 @@ RecyclerView.Adapter<RecycleViewCalculatorViewActivity.ViewHolder>(){
             val db = CalculatorDataBase(context)
             db.deleteProduct(index)
 
-            Toast.makeText(context, "com.example.kitchenhelper.Nutrition.Product has been deleted",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Product has been deleted",Toast.LENGTH_SHORT).show()
             context.startActivity(Intent(context, NutritionCalculatorActivity::class.java))
             (context as Activity).finish()
         }

@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.kitchenhelper.DataBases.ShoppingListDataBase
 import com.example.kitchenhelper.R
 
 class AddActivity : ComponentActivity() {

@@ -1,4 +1,4 @@
-package com.example.kitchenhelper.ShoppingList
+package com.example.kitchenhelper.DataBases
 
 import android.content.ContentValues
 import android.content.Context
@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class ShoppingListDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_NAME = "com.example.kitchenhelper.ShoppingList.ShoppingListDataBase.db"
+        private const val DATABASE_NAME = "com.example.kitchenhelper.DataBases.ShoppingListDataBase.db"
         private const val DATABASE_VERSION = 2
 
         const val TABLE_NAME = "products"

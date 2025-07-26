@@ -75,7 +75,6 @@ class RecipeViewActivity : ComponentActivity() {
     }
 
     private fun createView() {
-        title = recipe
 
         recipebd = RecipesDataBase(this)
         recipeCursor = recipebd.getRecipe(index.toString())

@@ -11,7 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Menu">
+            android:theme="@style/Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,61 +21,61 @@
 
         <activity
             android:name=".ShoppingList.ListActivity"
-            android:label="Shopping List">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".ShoppingList.AddActivity"
-            android:label="Add product">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Recipes.RecipesActivity"
-            android:label="Recipes">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Recipes.AddRecipeActivity"
-            android:label="Add Recipe">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Recipes.RecipeViewActivity"
-            android:label="Recipe">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Recipes.AddIngredientActivity"
-            android:label="Add ingredient">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Nutrition.NutritionActivity"
-            android:label="Nutritional values">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Nutrition.NutritionCalculatorActivity"
-            android:label="Nutritional values calculator">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Nutrition.NutritionSingleIngredientActivity"
-            android:label="Nutritional values (per 100g)">
+            android:theme="@style/Theme">
 
         </activity>
 
         <activity
             android:name=".Nutrition.AddToCalculatorActivity"
-            android:label="Add product to calculator">
+            android:theme="@style/Theme">
 
         </activity>
     </application>

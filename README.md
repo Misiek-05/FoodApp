@@ -2,7 +2,8 @@
 
 ## Basic info
 
-Food App is a Kotlin-based Android app that helps you stay organized in the kitchen. Whether you're planning your next grocery trip, storing your favorite recipes, or checking basic nutrition facts.
+Food App is a Kotlin-based Android app that helps with kitchen organization. Features include recipe storage, grocery planning, and nutrition lookup.
+🛠️ This project is still in progress.
 
 ### 🛠️ Key Features
 
@@ -20,6 +21,5 @@ To install and run this app, you'll need Android Studio installed on your comput
    cd mykitchen
 2. Open Project in Android Studio
 3. Build a project
-4. ▶️Run it on emulator in Anroid Studio or on your phone
+4. ▶️Run it on emulator in Android Studio or on your phone
 
-## How to use it

@@ -39,7 +39,7 @@ class AddActivity : ComponentActivity() {
 
             if (productInput.isNotEmpty() && value != null) {
                 shoppingListdb.addProduct(productInput, value, spinnerInput)
-                Toast.makeText(this,"com.example.kitchenhelper.Nutrition.Product has been added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Product has been added", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
                 Toast.makeText(this, "Missing input", Toast.LENGTH_SHORT).show()

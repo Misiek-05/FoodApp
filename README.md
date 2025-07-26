@@ -10,7 +10,7 @@ Food App is a Kotlin-based Android app that helps you stay organized in the kitc
 - 📖 **Recipe Book** – Save your favorite meals with ingredients and instructions.
 - 🍎 **Nutrition Info** – Look up calories and macros for common foods.
 
-## How to install
+## How to install and Run
 
 To install and run this app, you'll need Android Studio installed on your computer. Once set up, you can open the project, build it, and run it on an emulator or physical Android device.
 
@@ -20,4 +20,6 @@ To install and run this app, you'll need Android Studio installed on your comput
    cd mykitchen
 2. Open Project in Android Studio
 3. Build a project
-4. Run it on emulator in Anroid Studio or on your phone
+4. ▶️Run it on emulator in Anroid Studio or on your phone
+
+## How to use it
